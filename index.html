@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription-Based Content Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+</head>
+<body>
+    <h1>Subscription-Based Content Platform</h1>
+
+    <button id="walletButton" onclick="connectWallet()">Connect Wallet</button>
+    <button id="disconnectButton" onclick="disconnectWallet()" style="display: none;">Disconnect Wallet</button>
+    <p id="walletAddress"></p>
+    <p id="walletStatus"></p>
+
+    <h2>Register as Creator</h2>
+    <input type="number" id="subscriptionFee" placeholder="Subscription Fee (in ETH)">
+    <button onclick="registerCreator()">Register</button>
+
+    <h2>Subscribe to Creator</h2>
+    <input type="text" id="creatorAddress" placeholder="Creator Address">
+    <button onclick="subscribe()">Subscribe</button>
+
+    <h2>Renew Subscription</h2>
+    <input type="text" id="renewCreatorAddress" placeholder="Creator Address">
+    <button onclick="renewSubscription()">Renew</button>
+
+    <h2>Check Subscription</h2>
+    <input type="text" id="checkSubscriberAddress" placeholder="Subscriber Address">
+    <input type="text" id="checkCreatorAddress" placeholder="Creator Address">
+    <button onclick="checkSubscription()">Check</button>
+    <p id="subscriptionStatus"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
